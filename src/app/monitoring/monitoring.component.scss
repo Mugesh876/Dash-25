@@ -1,0 +1,126 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  /* Aligns items to opposite ends */
+  align-items: center;
+  background-color: transparent;
+  /* Dark blue background */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: white;
+}
+
+.payroll-button {
+  background-color: #015798;
+  /* Blue */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.payroll-button:hover {
+  background-color: #014177;
+  /* Darker blue */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.payroll-button:active {
+  transform: scale(0.95);
+  /* Shrinks slightly on click */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple Effect */
+.payroll-button::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.6s;
+}
+
+.payroll-button:active::after {
+  transform: scale(2.5);
+  opacity: 0;
+}
+
+.payroll-button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+}
+:host ::ng-deep .p-breadcrumb {
+  border: none;
+  background-color: transparent;
+}
+
+.bar-chart-section {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); // Single column for the bar chart section
+  gap: 1rem;
+  justify-items: center; // Center the bar chart horizontally
+  padding: 0;
+  margin-bottom: 1rem;
+
+  .bar-chart-card {
+    width: 100%; // Allow it to take full width within the container
+    max-width: 50vw; // Set a maximum width for larger screens
+  }
+
+  @media (max-width: 768px) {
+    .bar-chart-card {
+      max-width: 100%; // Full width on smaller screens
+      .p-chart {
+        height: 300px; // Adjust height for smaller screens
+      }
+    }
+  }
+}
+
+.section-charts {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); // Auto layout with minimum width for each card
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .pie-chart-card,
+  .doughnut-chart-card {
+    .p-chart {
+      height: 300px; // Set height for pie/doughnut charts
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Full width for each card on smaller screens
+    .pie-chart-card,
+    .doughnut-chart-card {
+      .p-chart {
+        height: 250px; // Adjust height for smaller screens
+      }
+    }
+  }
+}

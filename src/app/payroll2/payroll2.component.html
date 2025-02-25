@@ -1,0 +1,226 @@
+<div class="header-container">
+  <!-- Breadcrumb -->
+  <p-breadcrumb class="breadcrumb" [model]="items" [home]="home"></p-breadcrumb>
+
+  <!-- Payroll Login Button -->
+  <button class="payroll-button">
+    <a href="https://payroll.tnhb.in/login">Payroll Login</a>
+  </button>
+</div>
+<div class="main">
+  <div style="display: flex">
+    <!-- Office Code -->
+    <div class="filter-item">
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label class="filter-label">Office Code</mat-label>
+        <mat-select multiple (selectionChange)="onOfficeCodeChange($event)">
+          <mat-option *ngFor="let code of officecode" [value]="code">
+            {{ code }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Designation Code -->
+    <div class="filter-item">
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label class="filter-label">Designation Code</mat-label>
+        <mat-select
+          multiple
+          (selectionChange)="onDesignationCodeChange($event)"
+        >
+          <mat-option
+            *ngFor="let designationcode of designation"
+            [value]="designationcode"
+          >
+            {{ designationcode }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Select Month -->
+    <div class="filter-item">
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label class="filter-label">Select Month</mat-label>
+        <mat-select (selectionChange)="onMonthChange($event)">
+          <mat-option *ngFor="let month of months" [value]="month">
+            {{ month }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Select Year -->
+    <div class="filter-item">
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label class="filter-label">Select Year</mat-label>
+        <mat-select (selectionChange)="onYearChange($event)">
+          <mat-option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <section class="section-charts">
+    <div
+      [ngStyle]="{ background: items.clr }"
+      *ngFor="let items of topBoxValue"
+      class="p-4 topbox"
+    >
+      <div style="width: 80%">
+        <span
+          ><p style="font-size: 12px" *ngIf="items.options">₹</p>
+          {{ items.val | number : (items.options ? "1.2-2" : "1.0-0") }}
+          <span style="font-size: x-small; margin-left: 5px"></span
+        ></span>
+        <p style="margin-top: 30px">{{ items.tittle }}</p>
+      </div>
+
+      <div style="width: 20%">
+        <img [src]="items.icon" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="stats-cards">
+    <div class="card forCards">
+      <div class="icon-container">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="head">Total Employee</h3>
+        <h4>{{ this.employeeCount }}</h4>
+      </div>
+    </div>
+    <div class="card forCards">
+      <div class="icon-container">
+        <i class="fa-solid fa-coins"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="head">Total Earnings</h3>
+
+        <h4>₹ {{ this.totalEarnings | number : "1.2-2" }}</h4>
+      </div>
+    </div>
+    <div class="card forCards">
+      <div class="icon-container">
+        <i class="fas fa-minus-circle"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="head">Total Deductions</h3>
+        <h4>₹ {{ this.totalDeduction | number : "1.2-2" }}</h4>
+      </div>
+    </div>
+    <div class="card forCards">
+      <div class="icon-container">
+        <i class="fas fa-wallet"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="head">Net Pay</h3>
+        <h4>₹ {{ this.totalPay | number : "1.2-2" }}</h4>
+      </div>
+    </div>
+  </div> -->
+
+  <section class="additional-info">
+    <div class="chart-container-2">
+      <h4>Employee Salary</h4>
+      <hr />
+
+      <div style="height: 310px; width: 400px; text-align: center">
+        <canvas id="genderChart1"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-container-2">
+      <h4>Deduction</h4>
+      <hr />
+
+      <div style="height: 310px; width: 300px; text-align: center">
+        <canvas id="disabilityChart1"></canvas>
+      </div>
+    </div>
+    <div class="chart-container-2" style="height: 450px">
+      <div style="height: 310px; width: 300px; text-align: center">
+        <h4>Payment Status</h4>
+        <hr />
+
+        <canvas id="paymentStatus"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="additional-info-1">
+            <div class="chart-container-3">
+                <h4>Street Vendor Income</h4>
+                <hr>
+
+                <div style="height:340px; width:700px;text-align:center">
+                    <canvas id="familyIncome1"></canvas>
+                </div>
+
+            </div>
+            <div class="chart-container-3">
+                <h4>Vending Type</h4>
+                <hr>
+
+                <div style="height:330px; width:550px;text-align:center">
+                    <canvas id="vendingType1"></canvas>
+
+                </div>
+            </div>
+
+        </div> -->
+  <div class="chart-container-1" style="width: 100%">
+    <h4>Earnings</h4>
+    <hr />
+
+    <div style="height: 310px; width: 100%; text-align: center" class="">
+      <canvas id="vendingBusinessName1" width="300" height="300"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-container-1">
+    <h4>Deduction</h4>
+    <hr />
+
+    <div style="height: 310px; width: 1300px; text-align: center">
+      <canvas id="deduction" width="300" height="300"></canvas>
+    </div>
+  </div>
+  <div class="additional-info-1">
+    <div class="chart-container-3">
+      <h4>Standard Deduction</h4>
+      <hr />
+
+      <div style="height: 310px; width: 690px; text-align: center">
+        <canvas id="familyEducation1"></canvas>
+      </div>
+    </div>
+    <div class="chart-container-3">
+      <h4>Advance Deductions</h4>
+      <hr />
+
+      <div style="height: 310px; width: 590px; text-align: center">
+        <canvas id="familyDisability1"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="SRB">
+    <h4>Sanctioned, Recovered and Balance</h4>
+    <hr />
+
+    <div style="height: 400px; width: 100%; text-align: center">
+      <canvas id="deduction1" width="3000" height="1000"></canvas>
+    </div>
+  </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(26, 26, 26, 0.863)  "
+  size="medium"
+  color="white"
+  type="ball-fussion"
+></ngx-spinner>
