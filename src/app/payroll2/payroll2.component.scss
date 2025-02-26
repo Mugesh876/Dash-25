@@ -224,7 +224,7 @@ canvas {
 
 .additional-info {
   display: grid;
-  grid-template-columns: 2fr 1.4fr 1.4fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
   margin-top: 10px;
   /* border: 1px solid black; */
@@ -549,4 +549,13 @@ $clr: rgba(26, 26, 26, 0.863);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 680px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

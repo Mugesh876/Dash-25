@@ -948,7 +948,7 @@ export class Payroll2Component {
             formatter: (value) => `₹${value.toLocaleString()}`, // Formatting numbers with ₹
             color: 'black', // Label color
             font: {
-              size: 7,
+              size: 13,
             },
           },
         },
