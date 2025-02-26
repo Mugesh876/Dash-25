@@ -41,7 +41,7 @@
     />
   </div>
 
-  <section class="section-charts">
+  <section class="topbox-cont">
     <div
       [ngStyle]="{ background: items.clr }"
       *ngFor="let items of topBoxValue"
@@ -80,13 +80,14 @@
     </p-card>
   </section>
 
-  <section class="bar-chart-section">
-    <p-card class="card bar-chart-card">
+  <!--   previous class's =  bar-chart-section > card bar-chart-card -->
+  <section class="new-section-cont">
+    <p-card class="new-card-cont">
       <h4 style="font-weight: 600">Total Land Acquisition (Extent in acres)</h4>
       <p-chart type="bar" [data]="data1" [options]="options1"></p-chart>
     </p-card>
 
-    <p-card class="card bar-chart-card">
+    <p-card class="new-card-cont">
       <h4 style="font-weight: 600">
         PTO - Utilised, Non Utilised & Land available
       </h4>
