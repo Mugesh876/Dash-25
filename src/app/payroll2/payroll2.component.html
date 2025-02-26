@@ -8,7 +8,7 @@
   </button>
 </div>
 <div class="main">
-  <div style="display: flex">
+  <div style="display: flex; flex-wrap: wrap">
     <!-- Office Code -->
     <div class="filter-item">
       <mat-form-field appearance="outline" class="filter-field">
@@ -135,7 +135,7 @@
       <h4>Employee Salary</h4>
       <hr />
 
-      <div style="height: 310px; width: 400px; text-align: center">
+      <div style="height: 310px; width: auto; text-align: center">
         <canvas id="genderChart1"></canvas>
       </div>
     </div>
@@ -144,11 +144,22 @@
       <h4>Deduction</h4>
       <hr />
 
-      <div style="height: 310px; width: 300px; text-align: center">
+      <div
+        style="
+          height: 310px;
+          width: 300px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        "
+      >
         <canvas id="disabilityChart1"></canvas>
       </div>
     </div>
-    <div class="chart-container-2" style="height: 450px">
+    <div
+      class="chart-container-2"
+      style="height: 450px; display: flex; justify-content: center"
+    >
       <div style="height: 310px; width: 300px; text-align: center">
         <h4>Payment Status</h4>
         <hr />
@@ -218,8 +229,8 @@
     <h4>Sanctioned, Recovered and Balance</h4>
     <hr />
 
-    <div style="height: 400px; width: 100%; text-align: center">
-      <canvas id="deduction1" width="3000" height="1000"></canvas>
+    <div style="height: 500px; width: 100%; text-align: center">
+      <canvas id="deduction1" width="3000" height="1200"></canvas>
     </div>
   </div>
 </div>

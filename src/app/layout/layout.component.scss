@@ -12,7 +12,13 @@
   /* Dark blue background */
   color: white;
   /* Ensures text/icon color is white */
+  /* Ensures text/icon color is white */
   border: none;
+}
+
+.menu-button mat-icon {
+  color: white !important;
+  /* Ensures the menu icon is white */
 }
 
 .menu-button mat-icon {
@@ -56,6 +62,8 @@
 
 
 
+
+
 /* Ensuring Inner Text Stays White */
 :host ::ng-deep .p-menu .p-menuitem .p-menuitem-content {
   color: white !important;
@@ -81,7 +89,12 @@
 
 h1.example-app-name {
 
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 900;
+    font-size: 1rem;
+    color: #ffffff;
   text-align: center;
   font-weight: 900;
     font-size: 1rem;
@@ -90,7 +103,9 @@ h1.example-app-name {
 
 .example-sidenav-container {
   /* Stretch the sidenav container to fill available space */
+  /* Stretch the sidenav container to fill available space */
   flex: 1;
+}
 }
 
 .example-sidenav-container mat-sidenav {
