@@ -8,7 +8,7 @@
   right: 0;
 }
 .menu-button {
-  background-color: #151b54;
+  background-color: #161f6d;
   /* Dark blue background */
   color: white;
   /* Ensures text/icon color is white */
@@ -73,7 +73,7 @@
 
 .example-toolbar {
   display: flex;
-  background: #151b54;
+  background: #161f6d;
   /* Light to Dark Blue */
   padding: 5px;
   color: white;
@@ -94,7 +94,7 @@ h1.example-app-name {
 }
 
 .example-sidenav-container mat-sidenav {
-  background: #151b54;
+  background: #161f6d;
   width: fit-content;
   color: white;
   /* Default text color */
@@ -138,3 +138,22 @@ h1.example-app-name {
   color: #fff !important;
 
 }
+
+// @keyframes flipAnimation {
+//   0% {
+//     transform: perspective(1000px) rotateY(0deg);
+//   }
+
+//   50% {
+//     transform: perspective(1000px) rotateY(180deg);
+//   }
+
+//   100% {
+//     transform: perspective(1000px) rotateY(360deg);
+//   }
+// }
+
+// img {
+//   animation: flipAnimation 3s linear infinite;
+//   transform-style: preserve-3d;
+// }
