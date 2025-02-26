@@ -64,15 +64,20 @@
     </div>
   </div>
 
-  <section class="section-charts">
+  <section class="topbox-cont">
     <div
       [ngStyle]="{ background: items.clr }"
       *ngFor="let items of topBoxValue"
       class="p-4 topbox"
     >
       <div style="width: 80%">
-        <span
-          ><p style="font-size: 12px" *ngIf="items.options">₹</p>
+        <span style="display: flex; align-items: center"
+          ><span
+            style="font-size: 22px; margin-right: 2px"
+            *ngIf="items.options"
+          >
+            ₹
+          </span>
           {{ items.val | number : (items.options ? "1.2-2" : "1.0-0") }}
           <span style="font-size: x-small; margin-left: 5px"></span
         ></span>
@@ -187,7 +192,7 @@
     <h4>Deduction</h4>
     <hr />
 
-    <div style="height: 310px; width: 1300px; text-align: center">
+    <div style="height: 310px; width: 100%; text-align: center">
       <canvas id="deduction" width="300" height="300"></canvas>
     </div>
   </div>
@@ -196,7 +201,7 @@
       <h4>Standard Deduction</h4>
       <hr />
 
-      <div style="height: 310px; width: 690px; text-align: center">
+      <div style="height: 310px; width: auto; text-align: center">
         <canvas id="familyEducation1"></canvas>
       </div>
     </div>
@@ -204,7 +209,7 @@
       <h4>Advance Deductions</h4>
       <hr />
 
-      <div style="height: 310px; width: 590px; text-align: center">
+      <div style="height: 310px; width: auto; text-align: center">
         <canvas id="familyDisability1"></canvas>
       </div>
     </div>
@@ -220,7 +225,7 @@
 </div>
 <ngx-spinner
   bdColor="rgba(26, 26, 26, 0.863)  "
-  size="medium"
-  color="white"
+  size="large"
+  color="blue"
   type="ball-fussion"
 ></ngx-spinner>

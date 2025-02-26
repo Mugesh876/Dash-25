@@ -31,6 +31,7 @@ Chart.register(ChartDataLabels);
     NgxSpinnerModule,
     FormsModule,
     ChartModule,
+    SharedModule,
   ],
   templateUrl: './payroll2.component.html',
   styleUrl: './payroll2.component.scss',
@@ -646,7 +647,7 @@ export class Payroll2Component {
       this.misc3,
       this.misc4,
     ]; // Replace with your dynamic data
-    const backgroundColors =  '#A7D5F2'; // Single color for all bars, as in the image
+    const backgroundColors = '#A7D5F2'; // Single color for all bars, as in the image
 
     const dataBar = {
       labels: labelsBar,
@@ -759,7 +760,7 @@ export class Payroll2Component {
       this.misc2,
       this.totalFestivalAdvance,
     ]; // Replace with your dynamic data
-    const backgroundColors =  '#A7D5F2'; // Single color for all bars, as in the image
+    const backgroundColors = '#A7D5F2'; // Single color for all bars, as in the image
 
     const dataBar = {
       labels: labelsBar,
