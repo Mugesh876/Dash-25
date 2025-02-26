@@ -1,5 +1,13 @@
-<main>
-    <p-breadcrumb class="max-w-full" [model]="items" [home]="home" />
+<div class="header-container">
+  <!-- Breadcrumb -->
+  <p-breadcrumb class="breadcrumb" [model]="items" [home]="home"></p-breadcrumb>
+
+  <!-- Payroll Login Button -->
+  <button class="payroll-button">
+    <a href="https://personnel.tnhb.tn.gov.in/">Personnel Login</a>
+  </button>
+</div>
+<div class="main">
 
     <div style="display: flex;flex-wrap: wrap;gap: 1rem;margin-bottom: 1rem;">
         <p-dropdown [options]="cityOrRural" optionLabel="label" [(ngModel)]="selectedcityOrRural"
@@ -113,4 +121,4 @@
         </div>
     </section>
 
-</main>
+</div>
