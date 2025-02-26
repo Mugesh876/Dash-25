@@ -183,6 +183,8 @@ export class PersonnelComponent {
 
     this.options1 = {
       responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       cutout: '60%',
       plugins: {
         legend: {
@@ -343,8 +345,9 @@ export class PersonnelComponent {
     };
 
     this.options2 = {
-      responsive: true,
-      maintainAspectRatio: false, // Ensures chart fills the container without fixed aspect ratio
+     responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8, // Ensures chart fills the container without fixed aspect ratio
       plugins: {
         legend: {
           display: true,
@@ -416,6 +419,9 @@ export class PersonnelComponent {
     };
 
     this.options3 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -517,6 +523,8 @@ export class PersonnelComponent {
 
     this.options5 = {
       responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -572,6 +580,9 @@ export class PersonnelComponent {
     };
 
     this.options6 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -623,6 +634,9 @@ export class PersonnelComponent {
     };
 
     this.options7 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -731,6 +745,9 @@ export class PersonnelComponent {
     };
 
     this.options9 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -880,6 +897,9 @@ export class PersonnelComponent {
     };
 
     this.options12 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {
@@ -1029,6 +1049,9 @@ export class PersonnelComponent {
     };
 
     this.options15 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
       plugins: {
         legend: {
           labels: {

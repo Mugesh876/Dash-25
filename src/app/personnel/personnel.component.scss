@@ -82,7 +82,7 @@ $min-column-width: 150px; // Minimum width of each column before wrapping
 
   // Style for grid items
   .grid-item {
-    background-color: #f4f4f4;
+    background-color: #ffff;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -98,3 +98,8 @@ $min-column-width: 150px; // Minimum width of each column before wrapping
   border: none;
   background-color: transparent;
 }
+h4{
+  text-align: center;
+}
+
+
