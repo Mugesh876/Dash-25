@@ -8,9 +8,16 @@
   right: 0;
 }
 .menu-button {
-  background-color: #2cabeb;
+  background-color: #151b54;
+  /* Dark blue background */
   color: white;
+  /* Ensures text/icon color is white */
   border: none;
+}
+
+.menu-button mat-icon {
+  color: white !important;
+  /* Ensures the menu icon is white */
 }
 :host ::ng-deep .p-menu {
   height: 100%;
@@ -47,6 +54,8 @@
   /* Inner shadow for clicked effect */
 }
 
+
+
 /* Ensuring Inner Text Stays White */
 :host ::ng-deep .p-menu .p-menuitem .p-menuitem-content {
   color: white !important;
@@ -64,30 +73,68 @@
 
 .example-toolbar {
   display: flex;
-  background: linear-gradient(135deg, #2cabeb, #005892);
+  background: #151b54;
   /* Light to Dark Blue */
   padding: 5px;
   color: white;
 }
 
 h1.example-app-name {
-  font-weight: bold;
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 900;
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 .example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  /* Stretch the sidenav container to fill available space */
   flex: 1;
-
-  mat-sidenav {
-    background: transparent;
-    width: fit-content;
-  }
 }
 
+.example-sidenav-container mat-sidenav {
+  background: #151b54;
+  width: fit-content;
+  color: white;
+  /* Default text color */
+  border-radius: 0px;
+  /* Ensures no rounded corners */
+}
+
+.example-sidenav-container mat-sidenav:hover,
+.example-sidenav-container mat-sidenav:hover * {
+  color: black !important;
+  /* Change text color on hover */
+}
+
+.circular-image {
+  width: 3.3rem;
+  /* Keeps the given size */
+  height: 3.3rem;
+  /* Ensures it's a perfect circle */
+  border-radius: 50%;
+  /* Makes it circular */
+  background-color: white;
+  /* White background */
+  padding: 5px;
+  /* Adds spacing around the image */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  display: block;
+}
 .example-is-mobile .example-sidenav-container {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
+}
+
+::ng-deep .p-menu .p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+::ng-deep .p-menu .p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-icon {
+  color: #fff !important;
+
 }
